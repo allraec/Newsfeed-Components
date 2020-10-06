@@ -158,11 +158,11 @@ const articleMaker = (articleObject) => {
   });
 
   return article;
-}
+};
 
 const articles = document.querySelector('.articles');
 
 data.forEach((item) => {
   let newArticle = articleMaker(item);
   articles.appendChild(newArticle);
-})
+});

@@ -86,6 +86,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'I NEED AN ADULT',
+    date: 'Dec 21st, 2012',
+    firstParagraph: `How much wood would a woodchuck chuck if a woodchuck could chuck wood `,
+
+    secondParagraph: `Sally sells seashells by the seashore `,
+
+    thirdParagraph: `Minekaniko nang mekaniko ni Monico ang makina nang Minica ni Monica.`
   }
 ];
 
@@ -153,4 +162,7 @@ const articleMaker = (articleObject) => {
 
 const articles = document.querySelector('.articles');
 
-articles.appendChild(articleMaker(data[1]));
+data.forEach((item) => {
+  let newArticle = articleMaker(item);
+  articles.appendChild(newArticle);
+})
